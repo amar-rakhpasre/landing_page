@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        header {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url(img03.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+   
+        }
+
+        nav {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 20px;
+            color: rgb(255, 255, 255);
+        }
+
+        .logo {
+            font-size: 2rem;
+            letter-spacing: 2px;
+            font-weight: 700;
+            transition: 0.4s linear;
+        }
+        .logo:hover{
+            scale: 1.1;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            padding: 10px 15px;
+            font-size: 18px;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: indianred;
+        }
+
+        .menu a::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: indianred;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .menu a:hover::before {
+            transform: scaleX(1);
+        }
+
+        .res {
+            padding: 10px 20px;
+            font-size: 20px;
+            background: indianred;
+            border-radius: 8px;
+            transition:  0.5s linear;
+        }
+        .res a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .res:hover {
+            background: transparent;
+            border: 1px solid indianred;
+        }
+
+        .content {
+            max-width: 650px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: wheat;
+        }
+
+        .content span {
+            letter-spacing: 5px;
+            padding: 50px;
+            position: relative;
+        }
+
+        .content h1 {
+            font-size: 3.5em;
+        }
+
+        .content .b1{
+            background: indianred;
+            padding: 10px 20px;
+            letter-spacing: 5px;
+            transition: 0.5s linear;
+        }
+        .b1 a{
+            text-decoration: none;
+            color: whitesmoke;
+        }
+        .content .b1:hover{
+            background: transparent;
+            border: 1px solid rgb(64, 255, 0);
+        }
+
+        .content .s2 {
+            top: 15px;
+        }
+        
+        /* Media Queries for Responsive Design */
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;  /* Stack nav items for small screens */
+                align-items: flex-start;  /* Align items to the start */
+                padding: 10px;  /* Add padding */
+                height: auto;  /* Make height auto for flexibility */
+            }
+
+            .logo {
+                font-size: 1.5rem;  /* Smaller logo for smaller screens */
+            }
+
+            .menu {
+                flex-direction: column;  /* Stack menu items */
+                gap: 10px;  /* Reduce gap between menu items */
+            }
+- 
+            .menu a {
+                font-size: 16px;  /* Smaller font size for menu links */
+                padding: 8px;  /* Reduce padding */
+            }
+
+            .res {
+                width: 100%;  /* Full width for the register button */
+                text-align: center;  /* Center text */
+                padding: 10px;  /* Padding adjustments */
+            }
+
+            .content {
+                max-width: 90%;  /* Change max width for better fit */
+                padding: 20px;  /* Margin adjustments */
+            }
+
+            .content h1 {
+                font-size: 2.5em;  /* Smaller font size for headings */
+            }
+
+            .content .b1 {
+                padding: 8px 16px;  /* Adjust button padding */
+            }
+
+            .content span {
+                padding: 20px;  /* Reduce padding around spans */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Traworld</div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Hill Stations</a>
+                <a href="#">Water Parks</a>
+                <a href="#">Contact Us</a> <!-- Corrected typo: "Constact" to "Contact" -->
+            </div>
+            <div class="res"><a href="#">Register</a></div>
+        </nav>
+        <section class="content"> 
+            <span class="s1">Enjoy</span>
+            <h1>Your Holidays with Traworld</h1> <!-- Corrected typo: "Hoildays" to "Holidays" -->
+            <br>
+            <div class="b1"><a href="#">Book Your Trip</a></div> <!-- Corrected typo: "You" to "Your" -->
+            <br>
+            <span class="s2">and let's Go..</span> <!-- Fixed typo: "lets" to "let's" -->
+        </section>
+    </header>
+</body>
+</html>
